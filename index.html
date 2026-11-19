@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Core30 · Privacy Policy</title>
+  <meta name="description" content="Privacy policy of Core30, a free 30-day core workout app for Android.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0C0C0E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <script>
+    // Idioma: ?lang=es / ?lang=en en la URL; si no, el idioma del navegador.
+    (function () {
+      var param = new URLSearchParams(location.search).get("lang");
+      var lang = param || (navigator.language || "en").slice(0, 2);
+      document.documentElement.setAttribute("data-lang", lang === "es" ? "es" : "en");
+      document.documentElement.lang = lang === "es" ? "es" : "en";
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #0C0C0E;
+      --card: #141418;
+      --card-2: #1A1A1F;
+      --border: #26262B;
+      --text: #F4F4F6;
+      --muted: #A1A1AA;
+      --accent: #FF3D1F;
+      --accent-soft: rgba(255, 61, 31, 0.14);
+      --lime: #A6FF00;
+      --lime-soft: rgba(166, 255, 0, 0.10);
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+
+    /* Sin JS se ven los dos idiomas; con JS solo el elegido */
+    html[data-lang="en"] .es, html[data-lang="es"] .en { display: none; }
+
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px; }
+    .brand { font-family: Anton, Impact, sans-serif; font-size: 22px; letter-spacing: 1px; }
+    .brand span { color: var(--accent); }
+    .langs { display: none; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 3px; }
+    html[data-lang] .langs { display: flex; }
+    .langs button {
+      border: 0; background: transparent; color: var(--muted); font: 700 13px Inter, sans-serif;
+      padding: 7px 14px; border-radius: 999px; cursor: pointer;
+    }
+    html[data-lang="en"] .langs [data-set="en"],
+    html[data-lang="es"] .langs [data-set="es"] { background: var(--accent); color: #fff; }
+
+    h1 {
+      font-family: Anton, Impact, sans-serif; font-weight: 400; text-transform: uppercase;
+      font-size: clamp(40px, 9vw, 64px); line-height: 1; margin: 0 0 12px; letter-spacing: 0.5px;
+    }
+    h1 em { font-style: normal; color: var(--accent); }
+    .updated { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+
+    .highlight {
+      background: var(--lime-soft); border: 1px solid rgba(166, 255, 0, 0.35); border-radius: 20px;
+      padding: 18px 20px; margin-bottom: 28px;
+    }
+    .highlight strong { color: var(--lime); display: block; font-size: 17px; margin-bottom: 4px; }
+    .highlight p { margin: 0; color: var(--text); }
+
+    nav.toc { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 16px 20px; margin-bottom: 28px; }
+    nav.toc p { margin: 0 0 8px; font-weight: 700; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+    nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 28px; }
+    nav.toc li { break-inside: avoid; }
+    @media (max-width: 560px) { nav.toc ol { columns: 1; } }
+
+    section { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 22px 20px; margin-bottom: 14px; }
+    h2 { font-size: 19px; margin: 0 0 10px; line-height: 1.3; }
+    h2 .n { color: var(--accent); margin-right: 6px; }
+    h3 { font-size: 16px; margin: 18px 0 6px; }
+    p { margin: 0 0 12px; }
+    section > :last-child { margin-bottom: 0; }
+    ul { margin: 0 0 12px; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { color: #ff6a52; }
+
+    .table { width: 100%; border-collapse: collapse; margin: 6px 0 12px; font-size: 15px; }
+    .table th, .table td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--border); }
+    .table th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
+    .table tr:last-child td { border-bottom: 0; }
+    @media (max-width: 560px) {
+      .table thead { display: none; }
+      .table, .table tbody, .table tr, .table td { display: block; width: 100%; }
+      .table tr { padding: 8px 0; border-bottom: 1px solid var(--border); }
+      .table td { border: 0; padding: 2px 0; }
+      .table td:first-child { font-weight: 700; }
+    }
+
+    .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+    footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 32px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">CORE<span>30</span></div>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-set="en">EN</button>
+      <button type="button" data-set="es">ES</button>
+    </div>
+  </header>
+
+  <!-- ===================================================== ENGLISH -->
+  <main class="en" lang="en">
+    <h1>Privacy <em>Policy</em></h1>
+    <p class="updated">Effective date: November 19, 2026</p>
+
+    <div class="highlight">
+      <strong>Your fitness data stays on your phone.</strong>
+      <p>No account, no servers. We never see your weight, your body measurements or your workouts.</p>
+    </div>
+
+    <nav class="toc">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#en-who">Who we are</a></li>
+        <li><a href="#en-data">Information you enter</a></li>
+        <li><a href="#en-use">How it is used</a></li>
+        <li><a href="#en-storage">Where it is stored</a></li>
+        <li><a href="#en-permissions">Permissions</a></li>
+        <li><a href="#en-ads">Advertising</a></li>
+        <li><a href="#en-third">Third-party services</a></li>
+        <li><a href="#en-retention">Retention and deletion</a></li>
+        <li><a href="#en-security">Security</a></li>
+        <li><a href="#en-children">Children</a></li>
+        <li><a href="#en-rights">Your rights</a></li>
+        <li><a href="#en-changes">Changes to this policy</a></li>
+        <li><a href="#en-contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section id="en-who">
+      <h2><span class="n">1.</span>Who we are</h2>
+      <p>Core30 is a free 30-day core and abs workout app for Android, developed by an independent developer (“we”, “us”). Core30 is free to use and may be supported by ads. This policy explains what information the app uses, why, and the choices you have.</p>
+      <p>For any question about privacy, contact us at <a href="mailto:alex.pears3423@gmail.com">alex.pears3423@gmail.com</a>.</p>
+    </section>
+
+    <section id="en-data">
+      <h2><span class="n">2.</span>Information you enter</h2>
+      <p>To build your personal plan, the app asks you for:</p>
+      <ul>
+        <li>Gender, year of birth, height and weight.</li>
+        <li>Your goal, body type and activity level.</li>
+        <li>Your preferred units (kg/lb, cm/ft).</li>
+      </ul>
+      <p>While you use the app, it also records:</p>
+      <ul>
+        <li>The days of the plan you complete and when you complete them.</li>
+        <li>Your plank test results.</li>
+        <li>The weights you log over time.</li>
+        <li>Your reminder settings (on/off and time).</li>
+      </ul>
+      <p>You don’t need to create an account. <strong>We never ask for your name, email address, phone number or precise location</strong>, and the app does not access your contacts, photos, camera, microphone or health apps.</p>
+    </section>
+
+    <section id="en-use">
+      <h2><span class="n">3.</span>How it is used</h2>
+      <p>This information is used only inside the app to:</p>
+      <ul>
+        <li>Generate your 30-day plan and adapt its difficulty to your level.</li>
+        <li>Estimate figures such as BMI and calories burned.</li>
+        <li>Show your progress, streak, calendar, weight chart and plank test comparison.</li>
+        <li>Send you the daily reminder, if you turn it on.</li>
+      </ul>
+      <p>The calculations in Core30 are estimates for general fitness purposes and are not medical advice.</p>
+    </section>
+
+    <section id="en-storage">
+      <h2><span class="n">4.</span>Where it is stored</h2>
+      <p>All the information described above is stored <strong>only on your device</strong>. We don’t run servers for Core30 and we don’t receive, sell or share your fitness or body data with anyone.</p>
+      <p>If Android backup is enabled on your phone, the system may include the app’s data in your personal Google backup, which is managed by Google under your Google account. You can turn this off in your phone’s settings.</p>
+    </section>
+
+    <section id="en-permissions">
+      <h2><span class="n">5.</span>Permissions</h2>
+      <ul>
+        <li><strong>Notifications</strong> – requested only if you turn on the daily reminder. Reminders are scheduled on your device and you can disable them at any time in Settings.</li>
+        <li><strong>Run at startup</strong> – lets the app re-schedule your reminder after the phone restarts. It does not collect any data.</li>
+        <li><strong>Internet and advertising ID</strong> – used only by the advertising service described below to load and measure ads.</li>
+      </ul>
+    </section>
+
+    <section id="en-ads">
+      <h2><span class="n">6.</span>Advertising</h2>
+      <p>To keep Core30 free, the app may show ads provided by <strong>Google AdMob</strong>. Ads are never shown while you are doing an exercise. To show, measure and limit ads and to prevent fraud, Google may automatically collect information such as:</p>
+      <ul>
+        <li>Your device’s advertising ID.</li>
+        <li>IP address (which can be used to estimate your approximate location, such as your country).</li>
+        <li>Device and app information (model, operating system, language, app version).</li>
+        <li>Interactions with ads (views and taps) and diagnostic data.</li>
+      </ul>
+      <p>This data is collected and processed by Google according to its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from apps that use its services</a>. <strong>Your fitness and body data is never shared with advertisers.</strong></p>
+      <h3>Your consent</h3>
+      <p>If you are in the European Economic Area, the United Kingdom or Switzerland, the app asks for your consent (through Google’s consent tool) before using your data for personalized ads. You can change your choice at any time from the app’s Settings. If you don’t consent, you may still see non-personalized ads, which are based on general context rather than your profile.</p>
+      <h3>Controlling ads on your phone</h3>
+      <p>You can reset or delete your advertising ID at any time in your phone’s settings (<em>Settings → Privacy → Ads</em> or <em>Settings → Google → Ads</em>, depending on your device). You can also manage ad personalization at <a href="https://myadcenter.google.com" target="_blank" rel="noopener">My Ad Center</a>.</p>
+    </section>
+
+    <section id="en-third">
+      <h2><span class="n">7.</span>Third-party services</h2>
+      <table class="table">
+        <thead><tr><th>Service</th><th>Purpose</th><th>Privacy policy</th></tr></thead>
+        <tbody>
+          <tr><td>Google AdMob</td><td>Showing and measuring ads</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+          <tr><td>Google User Messaging Platform</td><td>Asking for and storing your ad consent</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+          <tr><td>Google Play</td><td>Downloading and updating the app</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+        </tbody>
+      </table>
+      <p>Google may process data on servers outside your country, including in the United States, under its own safeguards.</p>
+    </section>
+
+    <section id="en-retention">
+      <h2><span class="n">8.</span>Retention and deletion</h2>
+      <p>Your data stays on your device until you delete it. You can:</p>
+      <ul>
+        <li>Restart your plan from the app’s Settings.</li>
+        <li>Delete all the app’s data from your phone’s settings (<em>Apps → Core30 → Storage → Clear data</em>).</li>
+        <li>Uninstall the app, which deletes all of its data from your device.</li>
+      </ul>
+      <p>Because we don’t keep any copy of your data, there is nothing for us to delete on our side. Data collected by Google for advertising is retained according to Google’s policies.</p>
+    </section>
+
+    <section id="en-security">
+      <h2><span class="n">9.</span>Security</h2>
+      <p>Your data is kept in the app’s private storage, which Android protects from other apps. Any data sent by the advertising service travels encrypted (HTTPS). No method of storage or transmission is 100% secure, but keeping your data on your device greatly reduces the risk.</p>
+    </section>
+
+    <section id="en-children">
+      <h2><span class="n">10.</span>Children</h2>
+      <p>Core30 is not directed at children under 13 (or the minimum age required in your country) and we do not knowingly collect information from them. If you believe a child has used the app and you have a concern, contact us and we will help.</p>
+    </section>
+
+    <section id="en-rights">
+      <h2><span class="n">11.</span>Your rights</h2>
+      <p>Depending on where you live (for example under the EU/UK GDPR or California privacy laws), you may have the right to access, correct, delete or move your personal data, to object to or restrict its processing, and to withdraw your consent at any time.</p>
+      <ul>
+        <li>Your fitness and body data is under your full control on your device: you can view and change it in the app and delete it as described above.</li>
+        <li>You can withdraw your ad consent at any time from the app’s Settings.</li>
+        <li>For data collected by Google for advertising, you can exercise your rights through Google’s <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">privacy tools</a>.</li>
+        <li><strong>We do not sell your personal information.</strong></li>
+      </ul>
+      <p>The legal bases we rely on are the performance of the service you request (creating your plan) and, for personalized advertising, your consent. You also have the right to complain to your local data protection authority.</p>
+    </section>
+
+    <section id="en-changes">
+      <h2><span class="n">12.</span>Changes to this policy</h2>
+      <p>We may update this policy, for example when we add new features. When we do, we will change the effective date at the top of this page, and important changes will also be announced in the app.</p>
+    </section>
+
+    <section id="en-contact">
+      <h2><span class="n">13.</span>Contact</h2>
+      <p>If you have any questions or requests about this policy or your data, write to <a href="mailto:alex.pears3423@gmail.com">alex.pears3423@gmail.com</a>. We will reply as soon as possible.</p>
+    </section>
+  </main>
+
+  <!-- ===================================================== ESPAÑOL -->
+  <main class="es" lang="es">
+    <h1>Política de <em>privacidad</em></h1>
+    <p class="updated">Fecha de entrada en vigor: 19 de noviembre de 2026</p>
+
+    <div class="highlight">
+      <strong>Tus datos de entrenamiento se quedan en tu móvil.</strong>
+      <p>Sin cuenta y sin servidores. Nunca vemos tu peso, tus medidas ni tus entrenamientos.</p>
+    </div>
+
+    <nav class="toc">
+      <p>Contenido</p>
+      <ol>
+        <li><a href="#es-who">Quiénes somos</a></li>
+        <li><a href="#es-data">Información que introduces</a></li>
+        <li><a href="#es-use">Para qué se usa</a></li>
+        <li><a href="#es-storage">Dónde se guarda</a></li>
+        <li><a href="#es-permissions">Permisos</a></li>
+        <li><a href="#es-ads">Publicidad</a></li>
+        <li><a href="#es-third">Servicios de terceros</a></li>
+        <li><a href="#es-retention">Conservación y borrado</a></li>
+        <li><a href="#es-security">Seguridad</a></li>
+        <li><a href="#es-children">Menores</a></li>
+        <li><a href="#es-rights">Tus derechos</a></li>
+        <li><a href="#es-changes">Cambios en esta política</a></li>
+        <li><a href="#es-contact">Contacto</a></li>
+      </ol>
+    </nav>
+
+    <section id="es-who">
+      <h2><span class="n">1.</span>Quiénes somos</h2>
+      <p>Core30 es una app gratuita para Android de entrenamiento de abdominales y core en 30 días, creada por un desarrollador independiente (“nosotros”). Core30 es gratis y puede financiarse con anuncios. Esta política explica qué información usa la app, para qué, y qué opciones tienes.</p>
+      <p>Para cualquier duda sobre privacidad, escríbenos a <a href="mailto:alex.pears3423@gmail.com">alex.pears3423@gmail.com</a>.</p>
+    </section>
+
+    <section id="es-data">
+      <h2><span class="n">2.</span>Información que introduces</h2>
+      <p>Para crear tu plan personalizado, la app te pide:</p>
+      <ul>
+        <li>Sexo, año de nacimiento, altura y peso.</li>
+        <li>Tu objetivo, tipo de cuerpo y nivel de actividad.</li>
+        <li>Tus unidades preferidas (kg/lb, cm/ft).</li>
+      </ul>
+      <p>Mientras usas la app, también guarda:</p>
+      <ul>
+        <li>Los días del plan que completas y cuándo los completas.</li>
+        <li>Los resultados de tus tests de plancha.</li>
+        <li>Los pesos que registras.</li>
+        <li>La configuración del recordatorio (activado o no, y la hora).</li>
+      </ul>
+      <p>No necesitas crear una cuenta. <strong>Nunca te pedimos tu nombre, email, teléfono ni ubicación exacta</strong>, y la app no accede a tus contactos, fotos, cámara, micrófono ni apps de salud.</p>
+    </section>
+
+    <section id="es-use">
+      <h2><span class="n">3.</span>Para qué se usa</h2>
+      <p>Esta información se usa solo dentro de la app para:</p>
+      <ul>
+        <li>Generar tu plan de 30 días y adaptar la dificultad a tu nivel.</li>
+        <li>Estimar datos como el IMC y las calorías quemadas.</li>
+        <li>Mostrar tu progreso, racha, calendario, gráfica de peso y comparación de los tests de plancha.</li>
+        <li>Enviarte el recordatorio diario, si lo activas.</li>
+      </ul>
+      <p>Los cálculos de Core30 son estimaciones con fines de forma física general y no son consejo médico.</p>
+    </section>
+
+    <section id="es-storage">
+      <h2><span class="n">4.</span>Dónde se guarda</h2>
+      <p>Toda la información anterior se guarda <strong>solo en tu dispositivo</strong>. No tenemos servidores para Core30 y no recibimos, vendemos ni compartimos tus datos físicos o de entrenamiento con nadie.</p>
+      <p>Si tienes activada la copia de seguridad de Android, el sistema puede incluir los datos de la app en tu copia personal de Google, gestionada por Google en tu cuenta. Puedes desactivarlo en los ajustes del móvil.</p>
+    </section>
+
+    <section id="es-permissions">
+      <h2><span class="n">5.</span>Permisos</h2>
+      <ul>
+        <li><strong>Notificaciones</strong>: solo se piden si activas el recordatorio diario. Los recordatorios se programan en tu dispositivo y puedes desactivarlos cuando quieras en Ajustes.</li>
+        <li><strong>Ejecutar al iniciar</strong>: permite volver a programar el recordatorio cuando el móvil se reinicia. No recoge ningún dato.</li>
+        <li><strong>Internet e ID de publicidad</strong>: los usa solo el servicio de anuncios descrito abajo para cargar y medir anuncios.</li>
+      </ul>
+    </section>
+
+    <section id="es-ads">
+      <h2><span class="n">6.</span>Publicidad</h2>
+      <p>Para que Core30 siga siendo gratis, la app puede mostrar anuncios de <strong>Google AdMob</strong>. Nunca se muestran anuncios mientras haces un ejercicio. Para mostrar, medir y limitar los anuncios y para evitar fraudes, Google puede recoger automáticamente información como:</p>
+      <ul>
+        <li>El ID de publicidad de tu dispositivo.</li>
+        <li>La dirección IP (que puede usarse para estimar tu ubicación aproximada, como el país).</li>
+        <li>Información del dispositivo y de la app (modelo, sistema operativo, idioma, versión de la app).</li>
+        <li>Interacciones con los anuncios (visualizaciones y toques) y datos de diagnóstico.</li>
+      </ul>
+      <p>Google recoge y trata estos datos según su propia <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener">Política de privacidad</a> y <a href="https://policies.google.com/technologies/partner-sites?hl=es" target="_blank" rel="noopener">cómo usa Google la información de las apps que usan sus servicios</a>. <strong>Tus datos físicos y de entrenamiento nunca se comparten con anunciantes.</strong></p>
+      <h3>Tu consentimiento</h3>
+      <p>Si estás en el Espacio Económico Europeo, el Reino Unido o Suiza, la app te pide consentimiento (mediante la herramienta de consentimiento de Google) antes de usar tus datos para anuncios personalizados. Puedes cambiar tu elección cuando quieras desde los Ajustes de la app. Si no das tu consentimiento, puedes seguir viendo anuncios no personalizados, basados en el contexto general y no en tu perfil.</p>
+      <h3>Controlar los anuncios en tu móvil</h3>
+      <p>Puedes restablecer o eliminar tu ID de publicidad cuando quieras en los ajustes del móvil (<em>Ajustes → Privacidad → Anuncios</em> o <em>Ajustes → Google → Anuncios</em>, según el dispositivo). También puedes gestionar la personalización de anuncios en <a href="https://myadcenter.google.com/?hl=es" target="_blank" rel="noopener">Mi Centro de Anuncios</a>.</p>
+    </section>
+
+    <section id="es-third">
+      <h2><span class="n">7.</span>Servicios de terceros</h2>
+      <table class="table">
+        <thead><tr><th>Servicio</th><th>Finalidad</th><th>Política de privacidad</th></tr></thead>
+        <tbody>
+          <tr><td>Google AdMob</td><td>Mostrar y medir anuncios</td><td><a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+          <tr><td>Google User Messaging Platform</td><td>Pedir y guardar tu consentimiento de anuncios</td><td><a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+          <tr><td>Google Play</td><td>Descargar y actualizar la app</td><td><a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+        </tbody>
+      </table>
+      <p>Google puede tratar datos en servidores fuera de tu país, incluido Estados Unidos, con sus propias garantías.</p>
+    </section>
+
+    <section id="es-retention">
+      <h2><span class="n">8.</span>Conservación y borrado</h2>
+      <p>Tus datos se quedan en tu dispositivo hasta que los borres. Puedes:</p>
+      <ul>
+        <li>Reiniciar tu plan desde los Ajustes de la app.</li>
+        <li>Borrar todos los datos de la app desde los ajustes del móvil (<em>Aplicaciones → Core30 → Almacenamiento → Borrar datos</em>).</li>
+        <li>Desinstalar la app, lo que borra todos sus datos del dispositivo.</li>
+      </ul>
+      <p>Como no guardamos ninguna copia de tus datos, no hay nada que borrar por nuestra parte. Los datos que recoge Google para publicidad se conservan según las políticas de Google.</p>
+    </section>
+
+    <section id="es-security">
+      <h2><span class="n">9.</span>Seguridad</h2>
+      <p>Tus datos se guardan en el almacenamiento privado de la app, que Android protege del resto de apps. Los datos que envía el servicio de anuncios viajan cifrados (HTTPS). Ningún método de almacenamiento o transmisión es 100 % seguro, pero mantener tus datos en tu dispositivo reduce mucho el riesgo.</p>
+    </section>
+
+    <section id="es-children">
+      <h2><span class="n">10.</span>Menores</h2>
+      <p>Core30 no está dirigida a menores de 13 años (o de la edad mínima exigida en tu país) y no recogemos conscientemente información de ellos. Si crees que un menor ha usado la app y te preocupa, contacta con nosotros y te ayudaremos.</p>
+    </section>
+
+    <section id="es-rights">
+      <h2><span class="n">11.</span>Tus derechos</h2>
+      <p>Según dónde vivas (por ejemplo, con el RGPD de la UE/Reino Unido o las leyes de privacidad de California), puedes tener derecho a acceder, rectificar, suprimir o trasladar tus datos personales, a oponerte o limitar su tratamiento y a retirar tu consentimiento en cualquier momento.</p>
+      <ul>
+        <li>Tus datos físicos y de entrenamiento están bajo tu control total en tu dispositivo: puedes verlos y cambiarlos en la app y borrarlos como se explica arriba.</li>
+        <li>Puedes retirar tu consentimiento de anuncios cuando quieras desde los Ajustes de la app.</li>
+        <li>Para los datos que recoge Google para publicidad, puedes ejercer tus derechos con las <a href="https://myaccount.google.com/data-and-privacy?hl=es" target="_blank" rel="noopener">herramientas de privacidad</a> de Google.</li>
+        <li><strong>No vendemos tu información personal.</strong></li>
+      </ul>
+      <p>Las bases legales en las que nos apoyamos son la prestación del servicio que solicitas (crear tu plan) y, para la publicidad personalizada, tu consentimiento. También tienes derecho a reclamar ante la autoridad de protección de datos de tu país (en España, la <a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>).</p>
+    </section>
+
+    <section id="es-changes">
+      <h2><span class="n">12.</span>Cambios en esta política</h2>
+      <p>Podemos actualizar esta política, por ejemplo al añadir funciones nuevas. Si lo hacemos, cambiaremos la fecha de entrada en vigor al principio de esta página, y los cambios importantes también se anunciarán en la app.</p>
+    </section>
+
+    <section id="es-contact">
+      <h2><span class="n">13.</span>Contacto</h2>
+      <p>Si tienes cualquier pregunta o solicitud sobre esta política o tus datos, escribe a <a href="mailto:alex.pears3423@gmail.com">alex.pears3423@gmail.com</a>. Te responderemos lo antes posible.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Core30</footer>
+</div>
+
+<script>
+  document.querySelectorAll(".langs button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var lang = b.getAttribute("data-set");
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.lang = lang;
+      var url = new URL(location.href);
+      url.searchParams.set("lang", lang);
+      history.replaceState(null, "", url);
+    });
+  });
+</script>
+</body>
+</html>
